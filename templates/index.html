@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Data Portal</title>
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <!-- CSS for styling -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        h1.page-title {
+            color: #4CAF50; /* Green color */
+            font-size: 25px; /* Font size set to 25px */
+            text-align: center;
+            margin-bottom: 30px; /* Space below the main heading */
+        }
+
+        .upload-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+            max-width: 550px;
+            width: 100%;
+        }
+
+        .logo {
+            width: 80px;
+            margin-bottom: 20px;
+        }
+
+        input[type="file"] {
+            padding: 12px;
+            font-size: 1em;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 400px;
+            display: inline-block;
+            background-color: #f9f9f9;
+        }
+
+        button {
+            padding: 12px 30px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .upload-container form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .upload-container form button {
+            margin-top: 15px;
+        }
+
+        .heading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .heading h1 {
+            margin: 0;
+            color: #4CAF50; /* Green color */
+            font-size: 15px; /* Font size set to 15px */
+        }
+
+        .logo {
+            width: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="page-title">Sales Data Portal</h1>
+    
+    <div class="upload-container">
+        <div class="heading">
+            <!-- Use a better sales icon -->
+            <img src="https://cdn-icons-png.flaticon.com/512/2331/2331859.png" alt="Sales Data Logo" class="logo">
+            <h1>Upload Sales Data</h1>
+        </div>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+</body>
+</html>
